@@ -13,7 +13,7 @@
 ![](https://img.shields.io/badge/Fork-If_you_found_interesting-%23FF0000.svg?&style=flat-square&logoColor=white&color=white)<br>
 </div>  
 
-This project shows basic implementation of RSA algorithm. 
+This project shows basic implementation of RSA algorithm from scratch. 
 
 ## RSA Mathematics
 1. Select 2 large prime numbers, lets say p and q.
