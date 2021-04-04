@@ -3,8 +3,8 @@ import requests
 from subprocess import run, PIPE
 import sys
 
-sys.path.insert(1, 'E://6th sem//CNS\miniproject//2//Py_files_RSA')
-import key_generate,enc,dec
+sys.path.insert(1, '..//Py_files_RSA')
+import key_generate,enc
 
 
 def button(request):
@@ -36,8 +36,14 @@ def encryption(request):
 
 def decryption(request):
     inp2 = request.POST.get('param2')
-    de = dec.decrypt(e, N, inp2)
-    return render(request, 'home.html', {'dec': de})
+    msg = ""
+
+    parts = inp2.split()
+    for part in parts:
+        if part:
+            c = int(part)
+            msg += chr(pow(c, d, N))
+    return render(request, 'home.html', {'dec': msg})
 
 
 """
